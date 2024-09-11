@@ -23,8 +23,8 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-
     echo "Connected successfully<br>";
+
 
     $sql = "SELECT id, imie, nazwisko FROM new_table";
     $result = $conn->query($sql);
@@ -36,6 +36,7 @@
     } else {
         echo "0 results";
     }
+
 
     // Close connection
     $conn->close();
